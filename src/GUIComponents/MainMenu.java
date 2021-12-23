@@ -20,6 +20,8 @@ public class MainMenu implements ActionListener {
 		mainMenu = new BasicFrame();
 		menuBody = mainMenu.getCenterBodyPanel();
 		
+		//Maybe hold the names in a string array
+		// and create the buttons with a for loop
 		button1 = new JButton("Add Assignment(s)");
 		button2 = new JButton("Remove Assignment(s)");
 		button3 = new JButton("Print Assignment(s)");
