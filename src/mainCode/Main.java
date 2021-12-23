@@ -1,12 +1,14 @@
 package mainCode;
 
-import GUIComponents.BasicFrame;
+import GUIComponents.MainMenu;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		new BasicFrame();
+		new MainMenu();
+		
+		
 
 	}
 

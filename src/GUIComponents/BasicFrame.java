@@ -11,11 +11,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.BorderFactory;
 
-public class BasicFrame {
+public class BasicFrame extends JFrame {
 	
 	//Creates the default window frame for the program
 
-	JFrame frame;
+
 	JPanel titleSection, bodySection, footerSection;
 	JPanel centerBody, centerTitle;
 	JLabel title;
@@ -23,10 +23,9 @@ public class BasicFrame {
 	public BasicFrame() {
 		
 		// Initializes the default frame
-		frame = new JFrame();
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setResizable(true);
-		frame.setSize(500, 500);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(true);
+		this.setSize(500, 500);
 		//frame.getContentPane().setBackground(new Color(0, 38, 77)); //Navy Blue ish
 		
 		
@@ -65,9 +64,9 @@ public class BasicFrame {
 		title.setVerticalTextPosition(JLabel.BOTTOM);
 		//title.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
 		
-		frame.add(titleSection, BorderLayout.NORTH);
-		frame.add(bodySection, BorderLayout.CENTER);
-		frame.add(footerSection, BorderLayout.SOUTH);
+		this.add(titleSection, BorderLayout.NORTH);
+		this.add(bodySection, BorderLayout.CENTER);
+		this.add(footerSection, BorderLayout.SOUTH);
 		
 		//centerTitle
 		titleSection.add(centerTitle);
@@ -81,7 +80,29 @@ public class BasicFrame {
 		titleSection.add(centerTitle, BorderLayout.CENTER);
 		titleSection.setBorder(BorderFactory.createEmptyBorder(25, 25, 25, 25));
 		
-		frame.setVisible(true);
+		this.setVisible(true);
 	}
 	
+	
+	// Getters & Setters
+	
+	public JPanel getBodyPanel() {
+		return bodySection;
+	}
+	
+	public JPanel getTitlePanel() {
+		return titleSection;
+	}
+	
+	public JPanel getFooterPanel() {
+		return footerSection;
+	}
+	
+	public JPanel getCenterBodyPanel() {
+		return centerBody;
+	}
+	
+	public JPanel getCenterTitlePanel() {
+		return centerTitle;
+	}
 }
