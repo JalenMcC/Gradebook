@@ -35,6 +35,11 @@ public class MainMenu implements ActionListener {
 		button3.setFocusable(false);
 		button4.setFocusable(false);
 		
+		button1.addActionListener(this);
+		button2.addActionListener(this);
+		button3.addActionListener(this);
+		button4.addActionListener(this);
+		
 		//menuBody.setLayout(new GridBagLayout());
 		menuBody.setLayout(new GridLayout(4, 1, 10, 10));
 		//menuBody.setLayout(new FlowLayout());
@@ -52,24 +57,27 @@ public class MainMenu implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		//
+		//Add Assignments
 		if (e.getSource() == button1) {
-			
+			mainMenu.dispose();
+			new AddAssignments();
 		}
 		
-		//
+		//Remove Assignments
 		else if (e.getSource() == button2) {
-			
+			mainMenu.dispose();
+			new RemoveAssignments();
 		}
 		
-		//
-		else if (e.getSource() == button2) {
-			
+		//Print Assignments
+		else if (e.getSource() == button3) {
+			mainMenu.dispose();
+			new PrintAssignments();
 		}
 		
-		//
-		else if (e.getSource() == button2) {
-			
+		//Exit 
+		else if (e.getSource() == button4) {
+			mainMenu.dispose();
 		}
 		
 	}
