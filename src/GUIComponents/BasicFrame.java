@@ -24,8 +24,8 @@ public class BasicFrame extends JFrame {
 		
 		// Initializes the default frame
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setResizable(true);
-		this.setSize(500, 500);
+		this.setResizable(false);
+		this.setSize(500, 600);
 		//frame.getContentPane().setBackground(new Color(0, 38, 77)); //Navy Blue ish
 		
 		
