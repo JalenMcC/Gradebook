@@ -1,8 +1,10 @@
 package GUIComponents;
 
 import java.awt.FlowLayout;
+import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,7 +29,7 @@ public class MainMenu implements ActionListener {
 		button3 = new JButton("Print Assignment(s)");
 		
 		//maybe move this one to bottom right
-		button4 = new JButton("Quit(?)");
+		button4 = new JButton("Exit Program");
 		
 		
 		button1.setFocusable(false);
@@ -40,17 +42,50 @@ public class MainMenu implements ActionListener {
 		button3.addActionListener(this);
 		button4.addActionListener(this);
 		
-		//menuBody.setLayout(new GridBagLayout());
-		menuBody.setLayout(new GridLayout(4, 1, 10, 10));
+		menuBody.setLayout(new GridBagLayout());
+		GridBagConstraints cst = new GridBagConstraints();
+		cst.insets = new Insets(10, 10, 10, 10);
+		//menuBody.setLayout(new GridLayout(4, 1, 10, 10));
 		//menuBody.setLayout(new FlowLayout());
 		
 		//
 		button1.setBounds(100, 100, 100, 100);
 		
+		// Button 1
+		cst.gridx = 0;
+		cst.gridy = 0;
+		cst.ipadx = 55;
+		cst.ipady = 30;
+		menuBody.add(button1, cst);
+		
+		// Button 2
+		cst.gridx = 0;
+		cst.gridy = 1;
+		cst.ipadx = 30;
+		cst.ipady = 30;
+		menuBody.add(button2, cst);
+		
+		// Button 3
+		cst.gridx = 0;
+		cst.gridy = 2;
+		cst.ipadx = 50;
+		cst.ipady = 30;
+		menuBody.add(button3, cst);
+		
+		// Button 4
+		cst.gridx = 0;
+		cst.gridy = 3;
+		cst.ipadx = 90;
+		cst.ipady = 30;
+		menuBody.add(button4, cst);
+		
+		
+		/*
 		menuBody.add(button1);
 		menuBody.add(button2);
 		menuBody.add(button3);
 		menuBody.add(button4);
+		*/
 		
 	}
 
