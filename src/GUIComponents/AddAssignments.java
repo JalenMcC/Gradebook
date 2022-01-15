@@ -18,7 +18,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class AddAssignments implements ActionListener{
+public class AddAssignments implements ActionListener {
 
 	//TODO: need to rename global variables
 	

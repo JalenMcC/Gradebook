@@ -68,6 +68,13 @@ public class PrintAssignments implements ActionListener {
 		grade_RB.setFocusable(false);
 		date_RB.setFocusable(false);
 		
+		//Adds action listeners for radio buttons
+		ascend_RB.addActionListener(this);
+		descend_RB.addActionListener(this);
+		name_RB.addActionListener(this);
+		grade_RB.addActionListener(this);
+		date_RB.addActionListener(this);
+		
 		// Layout
 		main_PNL.setLayout(new GridBagLayout());
 		GridBagConstraints cst = new GridBagConstraints();
@@ -101,7 +108,7 @@ public class PrintAssignments implements ActionListener {
 		cst.gridy = 1;
 		main_PNL.add(date_RB, cst);
 		
-		// List Panel
+		// List Text Area & Scroll Pane
 		cst.gridx = 0;
 		cst.gridy = 2;
 		cst.gridwidth = 9;
